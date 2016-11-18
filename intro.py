@@ -2,22 +2,22 @@
 x = []
 for i in range(20,9, -1):
     x.append(i)
-#print(x)
+print(x)
 
 # 2. Write a list comprehension that returns the numbers from 20 to 10
 x_comp = [i for i in range(20, 9, -1)]
-#print(x_comp)
+print(x_comp)
 
 # 3. Write a loop that prints out only the numbers from 20 to 10 that are even
 even = []
 for i in range(20,9,-1):
     if i%2==0:
         even.append(i)
-#print(even)
+print(even)
 
 # 4. Write a list comprehension that prints out only the numbers from 20 to 10 that are even
 even_comp = [i for i in range(20,9,-1) if i%2==0]
-#print(even_comp)
+print(even_comp)
 
 # 5. Write a function that calculates whether a number is a prime number (hint: what does 2 % 3 give you?)
 def prime (x):
@@ -26,8 +26,8 @@ def prime (x):
         if p == 0:
             return False
     return True
-#print(prime(5))
-#print(prime(24))
+print(prime(5))
+print(prime(24))
 
 # 6. Write a function that loads a text file, loops over the lines in it, and
     # prints out the fifth character on the fifth line of that file.
@@ -36,24 +36,28 @@ def prime (x):
         # for line in handle:
         ## Do something
 
-#def text_5("name_of_file.txt")         #I keep getting a syntax error here
-    #with open("name_of_file.txt") as file:
-        #for line in file:
-            #print(line[4])
+def text_5 (my_file):              #I keep getting a syntax error here
+    counter = 1
+    with open(my_file) as file:
+        for line in file:
+            if counter == 5:
+                print(line[4])
+            counter = counter + 1
+text_5("test_text.txt")
 
 # 7. Write a loop that prints out the numbers from 1 to 20, printing "Good: NUMBER"
     # if the number is divisible by five and "Job: NUMBER" if the number is prime
     # and nothing otherwise
 
-#for i in range(1,21,1):
-    #if i % 5 == 0:
-        #print("Good:", i)
-    #elif prime(i) == True:
-        #print("Job:", i)
-    #if __name__ == '__main__':
-        #if __name__ == '__main__':
-            #if i == 5:
-                #print("Job:", i)
+for i in range(1,21,1):
+    if i % 5 == 0:
+        print("Good:", i)
+    elif prime(i) == True:
+        print("Job:", i)
+    if __name__ == '__main__':
+        if __name__ == '__main__':
+            if i == 5:
+                print("Job:", i)
 
 # 8. A bologist is modelling population growth using a Gompertz curve, which is defined
     # as y(t) = a.e^-b.e^-c.t where y is population size, t is time, a and b are
@@ -63,8 +67,8 @@ def prime (x):
 def gompertz(time, a, b, c):
     import math
     y = a * math.exp(-b * math.exp(-c * time))
-    return(y)
-#print(gompertz(20, 3, 30, 1))
+    return y
+print(gompertz(20, 3, 30, 1))
 
 # 9. Write a function that draws boxes of a specified width and height that look like
     # this (height 3, width 5):
@@ -80,7 +84,7 @@ def simpleBox(height, width):
         else:
             print("*" + " "*(width-2) + "*")
 
-#simpleBox(10,10)            # Ahhh! Yay! It totally works!!!
+simpleBox(10,10)            # Ahhh! Yay! It totally works!!!
 
 # 10. Implement a point class that holds x and y information for a point in space.
     # Note that I am not asking you to plot that line
@@ -95,5 +99,10 @@ class Point:
     def __init__(self, x, y):
         self.x, self.y = x, y
 
-    def distance(point1, point2):
-       return ((point2[x] - point1[x])**2 + (point2[y] - point1[y])**2)**0.5
+    if __name__ == '__main__':
+        def distance(point1, point2):
+           return ((point2[x] - point1[x]) ** 2 + (point2[y] - point1[y]) ** 2) ** 0.5
+
+# 12. Implement a line class that takes two point objects and makes a line between
+    # them. Note that I am not asking you to plot the line
+
