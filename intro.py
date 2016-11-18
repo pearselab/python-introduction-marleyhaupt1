@@ -80,4 +80,20 @@ def simpleBox(height, width):
         else:
             print("*" + " "*(width-2) + "*")
 
-simpleBox(10,10)            # Ahhh! Yay! It totally works!!!
+#simpleBox(10,10)            # Ahhh! Yay! It totally works!!!
+
+# 10. Implement a point class that holds x and y information for a point in space.
+    # Note that I am not asking you to plot that line
+
+class Point:
+    def __init__(self, x, y):
+        self.x, self.y = x, y
+
+# 11. Write a distance method that calculates the distance between two points in space.
+
+class Point:
+    def __init__(self, x, y):
+        self.x, self.y = x, y
+
+    def distance(point1, point2):
+       return ((point2[x] - point1[x])**2 + (point2[y] - point1[y])**2)**0.5
