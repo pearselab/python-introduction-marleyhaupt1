@@ -36,13 +36,13 @@ print(prime(24))
         # for line in handle:
         ## Do something
 
-def text_5 (my_file):              #I keep getting a syntax error here
-    counter = 1
+def text_5 (my_file):
+    c = 1
     with open(my_file) as file:
         for line in file:
-            if counter == 5:
+            if c == 5:
                 print(line[4])
-            counter = counter + 1
+            c = c + 1
 text_5("test_text.txt")
 
 # 7. Write a loop that prints out the numbers from 1 to 20, printing "Good: NUMBER"
